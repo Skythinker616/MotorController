@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>img/BoardC-Can.png</file>
+        <file>img/BoardC-Ports.png</file>
+        <file>img/BoardC-Pwm.png</file>
+        <file>icon.ico</file>
+        <file>img/Help-CmdWindow.png</file>
+        <file>img/Help-MainWindow-Can.png</file>
+        <file>img/Help-MainWindow-Pwm.png</file>
+        <file>img/Help-PidWindow.png</file>
+        <file>img/Help-PwmCtrlWindow.png</file>
+        <file>img/Help-TimConfWindow.png</file>
+    </qresource>
+    <qresource prefix="/doc">
+        <file>help.html</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>qss/qss-img/light-blue-checkbox-checked.png</file>
+        <file>qss/qss-img/light-blue-checkbox-unchecked.png</file>
+        <file>qss/qss-img/light-blue-downarrow.png</file>
+        <file>qss/qss-img/light-blue-radiobutton-checked.png</file>
+        <file>qss/qss-img/light-blue-radiobutton-unchecked.png</file>
+        <file>qss/qss-img/light-blue-uparrow.png</file>
+        <file>qss/light-blue.qss</file>
+        <file>qss/dark-blue.qss</file>
+    </qresource>
+</RCC>
