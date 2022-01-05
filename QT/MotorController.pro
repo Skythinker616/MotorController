@@ -10,14 +10,14 @@ CONFIG += c++11
 # depend on your compiler). Please consult the documentation of the
 # deprecated API in order to know how to port your code away from it.
 DEFINES += QT_DEPRECATED_WARNINGS \
-    APP_BUILD_DATE=\\\"2021.9.20\\\"
+    APP_BUILD_DATE=\\\"2021.12.16\\\"
 
 # You can also make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-VERSION = 1.0.3.0
+VERSION = 1.0.4.0
 
 SOURCES += \
     aboutdialog.cpp \

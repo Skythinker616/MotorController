@@ -16,6 +16,7 @@
 #include <QTime>
 #include <windows.h>
 #include <aboutdialog.h>
+#include <qdesktopservices.h>
 
 #define FRAME_HEADER 0xAA
 

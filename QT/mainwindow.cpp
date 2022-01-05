@@ -604,8 +604,9 @@ void MainWindow::setAppStyle(AppStyle style)
     ui->action_light_blue_style->setChecked(false);
     ui->action_dark_blue_style->setChecked(false);
 
-    if(style==Style_Default)//切换为默认样式(只能写入配置等用户重启程序)
+    if(style==Style_Default)//切换为默认样式
     {
+        qApp->setStyleSheet("");
         ui->action_default_style->setChecked(true);
     }
     else if(style==Style_LightBlue)//切换为LightBlue样式
@@ -763,21 +764,21 @@ void MainWindow::on_action_sync_triggered()
 void MainWindow::on_action_ports_help_triggered()
 {
     //调用系统默认方式打开图片
-    ShellExecuteA(NULL,"open",(QCoreApplication::applicationDirPath()+"/img/BoardC-Ports.png").toStdString().c_str(),NULL,NULL,SW_HIDE);
+    QDesktopServices::openUrl(QUrl("file:///"+QCoreApplication::applicationDirPath()+"/img/BoardC-Ports.png",QUrl::TolerantMode));
 }
 
 //PWM说明菜单项点击时调用
 void MainWindow::on_action_pwm_help_triggered()
 {
     //调用系统默认方式打开图片
-    ShellExecuteA(NULL,"open",(QCoreApplication::applicationDirPath()+"/img/BoardC-Pwm.png").toStdString().c_str(),NULL,NULL,SW_HIDE);
+    QDesktopServices::openUrl(QUrl("file:///"+QCoreApplication::applicationDirPath()+"/img/BoardC-Pwm.png",QUrl::TolerantMode));
 }
 
 //CAN说明菜单项点击时调用
 void MainWindow::on_action_can_help_triggered()
 {
     //调用系统默认方式打开图片
-    ShellExecuteA(NULL,"open",(QCoreApplication::applicationDirPath()+"/img/BoardC-Can.png").toStdString().c_str(),NULL,NULL,SW_HIDE);
+    QDesktopServices::openUrl(QUrl("file:///"+QCoreApplication::applicationDirPath()+"/img/BoardC-Can.png",QUrl::TolerantMode));
 }
 
 //关于菜单项点击时调用
@@ -792,14 +793,12 @@ void MainWindow::on_action_about_triggered()
 void MainWindow::on_action_help_triggered()
 {
     //调用系统默认方式打开HTML文档
-    ShellExecuteA(NULL,"open",(QCoreApplication::applicationDirPath()+"/help.html").toStdString().c_str(),NULL,NULL,SW_HIDE);
+    QDesktopServices::openUrl(QUrl("file:///"+QCoreApplication::applicationDirPath()+"/help.html",QUrl::TolerantMode));
 }
 
 //默认界面样式菜单项点击时调用
 void MainWindow::on_action_default_style_triggered()
 {
-    if(appStyle!=Style_Default)
-        QMessageBox::information(NULL,"提示","切换为默认样式需重启软件后生效");
     setAppStyle(Style_Default);
 }
 
